@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIGS</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/voice.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>듣고 있습니다.<br />무엇을 도와드릴까요?</h1>
+        <p>인식이 안되는 경우, 마이크를 입에 좀 더 갖다 대 주세요.</p>
+        <div class="container">
+            <audio id="voice1" controls hidden>
+                <source src="voice/voice1.mp3" type="audio/mp3">
+            </audio>
+            <p id="message">매칭기능을 실행하겠습니다.<br /> 찾아본 결과, 총 1건의 맞춤 구인 정보가 있습니다. <br/> 이력서를 보내시겠습니까? </p>
+            <table id="result">
+                <thead>
+                    <tr>
+                        <th>회사명</th>
+                        <th>채용사항</th>
+                        <th>인원</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>공릉삼익아파트</td>
+                        <td>미화원</td>
+                        <td>2명</td>
+                    </tr>
+                </tbody>
+            </table>
+            <audio id="voice2" controls hidden>
+                <source src="voice/voice2.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="pulse">
+            <img id="voice_button" src="img/microphone.png" />
+        </div>
+    </div>
+    <script>
+        document.getElementById("voice1").play();
+        document.getElementById("voice_button").onclick = function () {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("result").style.display = "inline";
+            document.getElementById("voice1").pause();
+            document.getElementById("voice2").play();
+        };
+    </script>
+</body>
+
+</html>

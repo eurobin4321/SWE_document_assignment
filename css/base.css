@@ -1,0 +1,124 @@
+html {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+@media screen and (min-width: 320px) {
+html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+}
+@media screen and (min-width: 1000px) {
+html {
+    font-size: 22px;
+}
+}
+
+h1.logo{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 4rem;
+}
+
+button{
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 5px solid black;
+    padding: 1em;
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+button:hover{
+    background-color: salmon;
+}
+
+button.btn_normal{
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+button.btn_warning{
+    padding: 0.4em;
+}
+
+button.btn_warning::before{
+    content: "! ";
+    font-weight: bold;
+}
+
+button.btn_proceed{
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+button.btn_proceed::after{
+    content: " →";
+}
+
+button.btn_full_width{
+    width: 70vw;
+    display: block;
+    margin: 10px auto;
+}
+
+input.text_input{
+    border: 2px solid black;
+    padding: 1em;
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100px;
+}
+
+div.container, div.scroll_container{
+    border: 4px solid black;
+    margin: 10px 5vw;
+    padding: 1em;
+    text-align: center;
+}
+
+div.container h1,div.scroll_container h1{
+    text-align: center;
+}
+
+div.scroll_container {
+    height: 40vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+table{
+    border: 4px solid black;
+    min-width: 50vw;
+    margin: 5px auto;
+}
+table caption{
+    padding: 1em;
+    font-size: 2em;
+}
+
+table tr td, th{
+    padding: 1em;
+    border: 4px solid black;
+}
+
+td.in_button{
+    padding: 0 !important;
+    border: none;
+    text-align: center;
+}
+
+td.in_button > button {
+    padding: 0.4em;
+}
+
+.no_border{
+    border: none;
+}
+
+.flex_wrapper{
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

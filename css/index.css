@@ -1,0 +1,27 @@
+#UI_voice, #UI_braille, #UI_visual{
+    width: 20vw;
+    text-align: center;    
+    padding: 0.5em;
+}
+
+#UI_voice img, #UI_braille img, #UI_visual img {
+    width: 10vw;
+    margin: 10px auto;
+}
+
+#UI_voice button, #UI_braille button, #UI_visual button {
+    display: block;
+    margin: 10px auto;
+}
+#index_wrapper {
+    text-align: center;
+}
+
+#description{
+    margin-top: -20px;
+}
+
+
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIGS</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="index_wrapper" class="container">
+        <h1 class="logo">GIGS</h1>
+        <div class="flex_wrapper">
+            <div id="UI_voice" class="container">
+                <h2>음성 전용 페이지</h2>
+                <img src="img/voice-command.png" />
+                <button onClick="location.href='voice.html'" class="btn_proceed">이동</button>
+            </div>
+            <div id="UI_braille" class="container">
+                <h2>점자 전용 페이지</h2>
+                <img src="img/braille.png" />
+                <button onClick="location.href='braille.html'" class="btn_proceed">이동</button>
+            </div>
+            <div id="UI_visual" class="container">
+                <h2>기본 페이지</h2>
+                <img src="img/view.png" />
+                <button class="btn_proceed">이동</button>
+            </div>
+        </div>
+        <button class="btn_full_width">고용담당자 전용 페이지</button>
+        <button class="btn_full_width">원격지원 요청</button>
+    </div>
+</body>
+
+</html>

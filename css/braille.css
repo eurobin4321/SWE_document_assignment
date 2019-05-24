@@ -1,0 +1,28 @@
+#braiile{
+    width: 20vw;
+    margin-top: 50px;
+}
+
+#blink{
+    display: block;
+    margin: 50px auto;
+    animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        zoom: 1;
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+    50% {
+        zoom: 1;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+    100% {
+        zoom: 1;
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+}
