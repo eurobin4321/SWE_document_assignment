@@ -1,0 +1,16 @@
+img#waiting{
+    width: 10vw;
+    margin-top: 50px;
+    animation: rotation 4s infinite;
+}
+
+@-webkit-keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+p span{
+    font-size: 2rem;
+    border: 5px solid black;
+    padding: 2px;
+}

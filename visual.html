@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIGS</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/visual.css">
+</head>
+
+<body>
+    <div id="mypage_wrapper" class="container">
+        <h1>마이페이지</h1>
+        <div id="info" class="container">
+            <h2>근무</h2>
+            <hr />
+            <span id="count">현재 2일차 입니다.</span>
+            <ul id="work_list">
+                <li>현재 근무처 : Link Agency</li>
+                <li>기간 : 2019.5.4. ~ 2019.5.9.</li>
+                <li>내용 :
+                    <ul>
+                        <li>- 원격근무1 : 마크업 작성</li>
+                        <li>- 원격근무2 : 페이지 완성 작업</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>프로필</h2>
+            <hr />
+            <img id="profile_pic" src="img/user.png" />
+            <span>홍길동씨</span>
+            <ul id="profile_list">
+                <li>이름 : 홍길동</li>
+                <li>학력 : 서울과기대 컴퓨터공학과</li>
+                <li>경력 : 전산직(웹개발) 4년
+                    <ul>
+                        <li>- 희망웹에이전시 개발팀 2년</li>
+                        <li>- Valve 원격근무 1년</li>
+                        <li>- Airbnb Korea Font-end 1년</li>
+                    </ul>
+                </li>
+                <li>법적 보호 사항<small id="cert">(개인정보 / 인증완료)</small>
+                    <ul>
+                        <li>- 지체장애 4급 <small>(복지카드 인증완료)</small></li>
+                        <li>- 발급일자 : 2016.2.5.</li>
+                        <li>- 법적 보호자 : 김영희(아내, 010-XXXX-XXXX)</li>
+                        <li>- 사회복지사 : 김철수<small>(노원구 복지센터 사회복지담당)</small></li>
+                    </ul>
+                </li>
+                <li>자격증</small>
+                    <ul>
+                        <li>- 정보처리기사 (2014.5.6)</li>
+                        <li>- 웹디자인 기능사 (2014.4.18)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="menu" class="container">
+            <h2>메뉴</h2>
+            <hr />
+            <button class="btn_normal" onclick="document.getElementById('CV').style.display='block'">간편이력서 작성/수정</button>
+            <button class="btn_normal">구인공고 조회 / 매칭 시작</button>
+            <button class="btn_normal">전자계약서 검토</button>
+            <button class="btn_normal">월급 계산</button>
+            <button class="btn_normal">근무 후기 작성</button>
+            <button class="btn_normal">경력 증명서 출력페이지</button>
+            <button class="btn_normal">사업체 / 기관 참고사항 조회</button>
+        </div>
+    </div>
+    <div id="CV" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>간편이력서</h2>
+        <form>
+            <div class="input_row">
+                <label for="subject">제목</label> <input id="subject" class="text_input" type="text"
+                    placeholder="안녕하세요 홍길동 입니다" />
+            </div>
+            <div class="input_row">
+                <label for="hope_at">희망 근무지 주소</label> <input id="hope_at" class="text_input" type="text"
+                    placeholder="서울시 노원구" />
+            </div>
+            <div class="input_row">
+                <label for="legally">법적보호사항</label> <input id="legally" class="text_input" type="text"
+                    placeholder="지체장애 4급 / 보호자 : 김영희(아내, 010-XXX-XXXX) / 사회복지사 : 김철수(..)" />
+            </div>
+            <div class="input_row">
+                <label for="hope_work">희망 업 직종</label> <input id="hope_work" class="text_input" type="text"
+                    placeholder="전산직(웹개발)" />
+            </div>
+            <div class="input_row">
+                <label for="subject">학력</label> <input id="subject" class="text_input" type="text"
+                    placeholder="서울과기대 컴퓨터공학과" />
+            </div>
+            <div class="input_row">
+                <label for="good_at">특기</label> <input id="good_at" class="text_input" type="text" placeholder="성실함" />
+            </div>
+            <div class="input_row">
+                <label for="certification">자격증</label> <input id="certification" class="text_input" type="text" placeholder="정보처리기사 (2014.5.6), 웹디자인 기능사 (2014.4.18)" />
+            </div>
+            <div class="input_row">
+                <label for="career">경력</label> <input id="career" class="text_input" type="text" placeholder="희망웹에이전시 개발팀 2년, Valve 원격근무 1년, Airbnb Korea Font-end 1년" />
+            </div>
+            <div class="input_row">
+                <label for="introduction">자기소개</label>
+                <textarea id="introduction" placeholder="안녕하십니까. 홍길동입니다. 저는 서울과기대 컴퓨터공학과를 0000년에 졸업했으며....."></textarea>
+            </div>
+            <button class="btn_full_width">저장하기</button>
+        </form>
+    </div>
+</body>
+
+</html>
