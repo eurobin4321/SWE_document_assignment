@@ -58,7 +58,7 @@
                     <tr>
                         <td>김알바</td>
                         <td>원격근무</td>
-                        <td>2019.5.9.~2019.5.15<br/>(예정)</td>
+                        <td>2019.5.9.~2019.5.15<br />(예정)</td>
                     </tr>
                 </tbody>
             </table>
@@ -107,6 +107,7 @@
                 채용</button>
             <button class="btn_normal" onclick="document.getElementById('calculate_cost').style.display='block'">인건비
                 계산</button>
+            <button class="btn_normal" onclick="document.getElementById('monthly_evaluation').style.display='block'">월말 구직자 평가 수신</button>
         </div>
     </div>
     <div id="hire_notice" class="modal">
@@ -396,6 +397,33 @@
             </tbody>
         </table>
         <button class="btn_full_width" onclick="this.parentElement.style.display = 'none';">확인 완료</button>
+    </div>
+
+    <div id="monthly_evaluation" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>월말 구직자 평가 수신</h2>
+        <table>
+            <caption>4월</caption>
+            <thead>
+                <tr>
+                    <th>근무자 명</th>
+                    <th>불편한 점</th>
+                    <th>사업체, 기관 평가</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>익명</td>
+                    <td>출입문이 좁아서 들어가기가 휠체어를 타고 사무실로 들어가기가 조금 불편했습니다.</td>
+                    <td>불편했던점 하나 빼고는 수당도 잘 챙겨주셔서 나름 괜찮았습니다.</td>
+                </tr>
+                <tr>
+                    <td>익명</td>
+                    <td>제가 원격근무 당시 다들 너무 바쁘셔서, 피드백을 잘 해주지 않는것 같습니다.</td>
+                    <td>원격근무자에게 조금 소통을 많이 해주셨으면 좋겠습니다. 그 외에는 수당 지급은 잘 해주시는것 같습니다.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
