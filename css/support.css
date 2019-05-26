@@ -5,8 +5,18 @@ img#waiting{
 }
 
 @-webkit-keyframes rotation {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+    0% {
+        -moz-transform: rotate(0deg);  /* FF3.5/3.6 */
+        -o-transform: rotate(0deg);  /* Opera 10.5 */
+        -webkit-transform: rotate(0deg);  /* Saf3.1+ */
+        transform: rotate(0deg);  /* Newer browsers (incl IE9) */
+    }
+    100% {
+        -moz-transform: rotate(360deg);  /* FF3.5/3.6 */
+        -o-transform: rotate(360deg);  /* Opera 10.5 */
+        -webkit-transform: rotate(360deg);  /* Saf3.1+ */
+        transform: rotate(360deg);  /* Newer browsers (incl IE9) */
+    }
 }
 
 p span{

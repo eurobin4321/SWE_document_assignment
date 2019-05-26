@@ -64,12 +64,12 @@
             <h2>메뉴</h2>
             <hr />
             <button class="btn_normal" onclick="document.getElementById('CV').style.display='block'">간편이력서 작성/수정</button>
-            <button class="btn_normal">구인공고 조회 / 매칭 시작</button>
-            <button class="btn_normal">전자계약서 검토</button>
-            <button class="btn_normal">월급 계산</button>
-            <button class="btn_normal">근무 후기 작성</button>
-            <button class="btn_normal">경력 증명서 출력페이지</button>
-            <button class="btn_normal">사업체 / 기관 참고사항 조회</button>
+            <button class="btn_normal" onclick="document.getElementById('matching').style.display='block'">구인공고 조회 / 매칭 시작</button>
+            <button class="btn_normal" onclick="document.getElementById('contrast_chk').style.display='block'">전자계약서 검토</button>
+            <button class="btn_normal" onclick="document.getElementById('salary_chk').style.display='block'">월급 계산</button>
+            <button class="btn_normal" onclick="document.getElementById('comment').style.display='block'">근무 후기 작성</button>
+            <button class="btn_normal" onclick="document.getElementById('print_expriment_certification').style.display='block'">경력 증명서 출력페이지</button>
+            <button class="btn_normal" onclick="document.getElementById('reference').style.display='block'">사업체 / 기관 참고사항 조회</button>
         </div>
     </div>
     <div id="CV" class="modal">
@@ -112,6 +112,328 @@
             <button class="btn_full_width">저장하기</button>
         </form>
     </div>
-</body>
 
+    <div id="matching" class="modal" >
+      <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+      <div class="container">
+        <h2>자동매칭 조건설정</h2>
+        <form>
+          <div class="input_row">
+              <label for="type_disability">장애인 분류</label> <input id="type_disability" class="text_input" type="text"
+                  placeholder="시각장애인" />
+          </div>
+          <div class="input_row">
+              <label for="degree">학력</label> <input id="degree" class="text_input" type="text"
+                  placeholder="고졸" />
+          </div>
+          <div class="input_row">
+              <label for="age">나이</label> <input id="age" class="text_input" type="text"
+                  placeholder="27" />
+          </div>
+          <div class="input_row">
+              <label for="experiment_duration">경력</label> <input id="experiment_duration" class="text_input" type="text"
+                  placeholder="3년" />
+          </div>
+          <div class="input_row">
+              <label for="place">근무지</label> <input id="place" class="text_input" type="text"
+                  placeholder="서울" />
+          </div>
+          <div class="input_row">
+              <label for="time">근무시간</label> <input id="time" class="text_input" type="text"
+                  placeholder="월~금 / 09:00 ~ 18:00" />
+          </div>
+          <div class="input_row">
+              <label for="salary">희망급여</label> <input id="salary" class="text_input" type="text"
+                  placeholder="1,000,000~1,500,000" />
+          </div>
+          <div class="input_row">
+              <label for="certi">보유자격증</label> <input id="certi" class="text_input" type="text"
+                  placeholder="정보처리산업기사" />
+          </div>
+          <div class="btn_proceed">
+            <button class="btn_proceed">자동매칭시작</button>
+          </div>
+        </form>
+      </div>
+      <div class="scroll_container">
+        <h2>구인 공고 조회</h2>
+        <table id="post_table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>날짜</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>농협카드 전화 상담사 모집</td>
+                    <td>농협</td>
+                    <td>2019-03-03</td>
+                    <td>9734</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>전국 매장 직원모집</td>
+                    <td>이마트</td>
+                    <td>2019-02-08</td>
+                    <td>11209</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>전국 매장 직원모집</td>
+                    <td>롯데리아</td>
+                    <td>2019-02-02</td>
+                    <td>11021</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>전국 매장 STAFF 모집</td>
+                    <td>다이소</td>
+                    <td>2019-01-31</td>
+                    <td>7731</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="modal" id="contrast_chk">
+      <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+      <h2>전자계약서</h2>
+      <table id="table_contract">
+            <tr>
+                <td colspan="2"><u>링크에이전시</u>(이하 "사업주"라 함)과 <u>홍지원</u>(이하 "근로자"라 함)은 다음과 같이 근로계약을 체결한다.</td>
+            </tr>
+            <tr>
+                <th>근로계약기간</th>
+                <td>2019.05.12. ~ 2019.05.20.</td>
+            </tr>
+            <tr>
+                <th>업무 내용</th>
+                <td>쇼핑몰 페이지 제작(내근직)</td>
+            </tr>
+            <tr>
+                <th>근로 시간</th>
+                <td>09시 00분 부터 18시 00분 까지</td>
+            </tr>
+            <tr>
+                <th>근무일 / 휴일</th>
+                <td>주말을 제외한 영업일 전체 근무(계약 종료 시 까지)</td>
+            </tr>
+            <tr>
+                <th>임금</th>
+                <td>일급 십오만원 정</td>
+            </tr>
+            <tr>
+                <th>사회보험 적용여부</th>
+                <td>고용보험, 산재보험, 국민보험, 건강보험</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="modal" id="salary_chk">
+      <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+      <h2>2019년 6월 급여명세서</h2>
+      <div class="container">
+        <table id="table_salary_chk">
+          <tr>
+            <td>지급항목</td>
+            <td>지급액</td>
+            <td>공제항목</td>
+            <td>공재액</td>
+          </tr>
+          <tr>
+            <td>기본급</td>
+            <td>2,000,000</td>
+            <td>소득세</td>
+            <td>17,180</td>
+          </tr>
+          <tr>
+            <td>직책수당</td>
+            <td>-</td>
+            <td>주민세</td>
+            <td>1,950</td>
+          </tr>
+          <tr>
+            <td>연장수당</td>
+            <td>-</td>
+            <td>고용보험</td>
+            <td>12,350</td>
+          </tr>
+          <tr>
+            <td>휴일수당</td>
+            <td>-</td>
+            <td>국민연금</td>
+            <td>85,500</td>
+          </tr>
+          <tr>
+            <td>상여금</td>
+            <td>40,000</td>
+            <td>장기요양</td>
+            <td>3800</td>
+          </tr>
+          <tr>
+            <td>기타</td>
+            <td>-</td>
+            <td>건강보험</td>
+            <td>58,140</td>
+          </tr>
+          <tr>
+            <td>식당</td>
+            <td>100,000</td>
+            <td>연말정산</td>
+            <td>58,140</td>
+          </tr>
+          <tr>
+            <td>교통비</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>복지후생</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>기타</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>공제합계</td>
+            <td>178,920</td>
+          </tr>
+          <tr>
+            <td>급여계</td>
+            <td>2,140,000</td>
+            <td>차감수령액</td>
+            <td>1,961,080</td>
+          </tr>
+        </table>
+        <button class="btn_proceed">5월 명세서 확인</button>
+        <button class="btn_proceed">7월 명세서 확인</button>
+      </div>
+    </div>
+
+    <div class="modal" id="comment">
+      <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+      <div class="container">
+        <h2>근무 후기 작성</h2>
+        <div class="input_row">
+            <label for="nickname">닉네임</label> <input id="nickname" class="text_input" type="text"
+                placeholder="닉네임" />
+        </div>
+        <div class="input_row">
+            <label for="pwd">비밀번호</label> <input id="pwd" class="text_input" type="text"
+                placeholder="비밀번호" />
+        </div>
+        <div class="input_row">
+            <label for="title">제목</label> <input id="title" class="text_input" type="text"
+                placeholder="제목을 입력하세요" />
+        </div>
+        <textarea id="introduction"></textarea>
+        <button class="btn_proceed">등록</button>
+      </div>
+    </div>
+
+
+    <div class="modal" id="print_expriment_certification">
+      <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+      <div class="container">
+        <h2>경력증명서 출력</h2>
+
+        <table id="experiment_table">
+          <tr>
+            <td>재직기간</td>
+            <td class="SS">유효번호</td>
+            <td>사업장(지역)</td>
+            <td>회사명</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2013.06.01<br>~2014.06.30</td>
+            <td >AAAA-1234-5678</td>
+            <td>트레이더스 하계지점</td>
+            <td>(주)이마트</td>
+            <td class="in_button"><button>출력</button></td>
+          </tr>
+          <tr>
+            <td>2014.08.01<br>~2015.04.21</td>
+            <td>14-13134534</td>
+            <td>코스트코 양재점</td>
+            <td>(주)COSTCO</td>
+            <td class="in_button"><button>출력</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="modal" id="reference">
+      <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+
+        <h2>사업체/기관 참고사항</h2>
+        <div class="scroll_container">
+          <caption>마이크로소프트</caption>
+          <table>
+            <tr>
+              <td>업무난이도</td>
+              <td>보통</td>
+            </tr>
+            <tr>
+              <td>불편한 점</td>
+              <td>명확한 원칙 위주로 돌아가는 것들이 많다</td>
+            </tr>
+            <tr>
+              <td>사업체, <br>기관 평가</td>
+              <td>기업규모가 소규모임에도 불구하고 퇴근시간 명확하고,<br>
+              야근수당제공 등 원리원칙에 강한 회사이다.</td>
+            </tr>
+          </table>
+          <br>
+          <caption>링크에이전시</caption>
+          <table>
+            <tr>
+              <td>업무난이도</td>
+              <td>상</td>
+            </tr>
+            <tr>
+              <td>불편한 점</td>
+              <td>디자이너가 장애인들에게 가혹하다.</td>
+            </tr>
+            <tr>
+              <td>사업체, <br>기관 평가</td>
+              <td>야근수당 등 원리원칙을 지키지 않는 경향이 강함<br>
+              가족경영의 폐헤를 절실히 느낌</td>
+            </tr>
+          </table>
+          <br>
+          <caption>롯데시네마</caption>
+          <table>
+            <tr>
+              <td>업무난이도</td>
+              <td>보통</td>
+            </tr>
+            <tr>
+              <td>불편한 점</td>
+              <td>건물내에서 이동간의 장애인 배려가 부족함</td>
+            </tr>
+            <tr>
+              <td>사업체, <br>기관 평가</td>
+              <td>여러가지 법적 수당을 잘 챙겨줌<br>
+              장애인 근무자에 대한 배려가 있음.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>

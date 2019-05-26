@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIGS</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hiremenu.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    <div id="hiremenu_wrapper" class="container">
+        <h1>마이페이지</h1>
+        <div id="info" class="container">
+            <!-- <h2>지원 현황</h2>
+            <hr />
+            <table id="employee">
+                <thead>
+                    <tr>
+                        <th id="name" style="width:25%">성함</th>
+                        <th id="charge" style="width:25%">근무</th>
+                        <th id="date">기간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>홍지원</td>
+                        <td>내근</td>
+                        <td>2019.5.10.~2019.5.16</td>
+                    </tr>
+                    <tr>
+                        <td>김지원</td>
+                        <td>원격근무</td>
+                        <td>2019.5.10.~2019.5.16</td>
+                    </tr>
+                </tbody>
+            </table> -->
+            <h2>채용 현황</h2>
+            <hr />
+            <table id="employee">
+                <thead>
+                    <tr>
+                        <th id="name" style="width:25%">성함</th>
+                        <th id="charge" style="width:25%">근무</th>
+                        <th id="date">기간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>홍길동</td>
+                        <td>원격근무</td>
+                        <td>2019.5.4.~2019.5.9</td>
+                    </tr>
+                    <tr>
+                        <td>김알바</td>
+                        <td>원격근무</td>
+                        <td>2019.5.9.~2019.5.15<br/>(예정)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>프로필</h2>
+            <hr />
+            <img id="profile_pic" src="img/logo.png" />
+            <img id="profile_pic" src="img/user.png" />
+            <span>인사담당자 김인사 씨</span>
+            <ul id="profile_list">
+                <li>회사명 : 링크 에이전시</li>
+                <li>주소 : 서울시 노원구 공릉2동 공학로 99길 99</li>
+                <li>대표명 : 김대표 씨</li>
+                <li>사업자 등록번호 : 000-00-0000</li>
+                <li>장애인 고용 인원수 : 7/10명</li>
+            </ul>
+        </div>
+        <div id="menu" class="container">
+            <h2>지원 현황</h2>
+            <hr />
+            <table id="employee">
+                <thead>
+                    <tr>
+                        <th id="name" style="width:25%">성함</th>
+                        <th id="charge" style="width:25%">근무</th>
+                        <th id="date">기간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>홍지원</td>
+                        <td>내근</td>
+                        <td>2019.5.10.~2019.5.16</td>
+                    </tr>
+                    <tr>
+                        <td>김지원</td>
+                        <td>원격근무</td>
+                        <td>2019.5.10.~2019.5.16</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>메뉴</h2>
+            <hr />
+            <button class="btn_normal"
+                onclick="document.getElementById('hire_notice').style.display='block'">구인공고</button>
+            <button class="btn_normal" onclick="document.getElementById('interview').style.display='block'">지원자 면접 및
+                채용</button>
+            <button class="btn_normal" onclick="document.getElementById('calculate_cost').style.display='block'">인건비
+                계산</button>
+        </div>
+    </div>
+    <div id="hire_notice" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>구인공고</h2>
+        <form>
+            <div class="input_row">
+                <label for="subject">제목</label> <input id="subject" class="text_input" type="text"
+                    placeholder="웹페이지 개발 직원 내근/원격근무자를 구합니다" />
+            </div>
+            <div class="input_row">
+                <label for="work_date">근무기간</label> <input id="work_date" class="text_input" type="text"
+                    placeholder="2019.5.12. ~ 2019.5.20." />
+            </div>
+            <div class="input_row">
+                <label for="hope_work">직종</label> <input id="hope_work" class="text_input" type="text"
+                    placeholder="웹개발" />
+            </div>
+            <div class="input_row">
+                <label for="hope_work">내용</label> <input id="hope_work" class="text_input" type="text"
+                    placeholder="쇼핑몰 페이지 제작" />
+            </div>
+            <div class="input_row">
+                <label for="introduction">근무 내용</label>
+                <textarea id="introduction"
+                    placeholder="저희 링크에이전시에서는 쇼핑몰 사이트를 제작에 참여할 단기 내근자 또는 원격근로자를 모집합니다...."></textarea>
+            </div>
+            <span>채용조건</span>
+            <hr />
+            <div class="input_row">
+                <label for="subject">학력</label> <input id="subject" class="text_input" type="text"
+                    placeholder="대졸 우대" />
+            </div>
+            <div class="input_row">
+                <label for="good_at">자격증</label> <input id="good_at" class="text_input" type="text"
+                    placeholder="정보처리기사 우대" />
+            </div>
+            <div class="input_row">
+                <label for="certification">필요사항</label> <input id="certification" class="text_input" type="text"
+                    placeholder="빠른 웹개발이 가능하신분" />
+            </div>
+            <div class="input_row">
+                <label for="career">장애인 조건</label> <input id="career" class="text_input" type="text"
+                    placeholder="경증 장애인(4급, 3급)" />
+            </div>
+            <button class="btn_full_width">저장</button>
+            <button class="btn_full_width">업로드</button>
+        </form>
+    </div>
+
+    <div id="interview" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>면접 및 채용</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>지원자 명</th>
+                    <th>지원 근무</th>
+                    <th>이력서</th>
+                    <th>연락처</th>
+                    <th>채용</th>
+                    <th>반려</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>홍지원</td>
+                    <td>내근</td>
+                    <td class="in_button"><button class="btn_normal"
+                            onclick="document.getElementById('interview_CV').style.display='block'">보기</button></td>
+                    <td>010-XXXX-XXXX</td>
+                    <td class="in_button"><button class="btn_normal"
+                            onclick="document.getElementById('contract').style.display='block'">채용하기</button></td>
+                    <td class="in_button"><button class="btn_normal">반려하기</button></td>
+                </tr>
+                <tr>
+                    <td>김지원</td>
+                    <td>원격근무</td>
+                    <td class="in_button"><button class="btn_normal">보기</button></td>
+                    <td>010-0000-0000</td>
+                    <td class="in_button"><button class="btn_normal">채용하기</button></td>
+                    <td class="in_button"><button class="btn_normal">반려하기</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="interview_CV" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>지원자 이력서 보기</h2>
+        <div class="scroll_container">
+            <h3>홍지원씨 의 이력서</h3>
+            <table id="table_CV">
+                <tr>
+                    <th>지원 근무</th>
+                    <td>내근직</td>
+                </tr>
+                <tr>
+                    <th>근무 가능 시간</th>
+                    <td>09:00 ~ 18:00</td>
+                </tr>
+                <tr>
+                    <th>법적 보호 사항</th>
+                    <td>지체장애 4급<br />보호자 : 김민희(어머니, 010-XXX-XXXX)<br />사회복지사 : 한상민(..)</td>
+                </tr>
+                <tr>
+                    <th>경력</th>
+                    <td>
+                        <ul>
+                            <li>이스트소프트 개발팀 3년</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button class="btn_full_width" onclick="this.parentElement.style.display = 'none';">확인 완료</button>
+    </div>
+
+    <div id="contract" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>전자계약서 작성</h2>
+        <table id="table_contract">
+            <tr>
+                <td colspan="2"><u>링크에이전시</u>(이하 "사업주"라 함)과 <u>홍지원</u>(이하 "근로자"라 함)은 다음과 같이 근로계약을 체결한다.</td>
+            </tr>
+            <tr>
+                <th>근로계약기간</th>
+                <td>2019.05.12. ~ 2019.05.20.</td>
+            </tr>
+            <tr>
+                <th>업무 내용</th>
+                <td>쇼핑몰 페이지 제작(내근직)</td>
+            </tr>
+            <tr>
+                <th>근로 시간</th>
+                <td>09시 00분 부터 18시 00분 까지</td>
+            </tr>
+            <tr>
+                <th>근무일 / 휴일</th>
+                <td>주말을 제외한 영업일 전체 근무(계약 종료 시 까지)</td>
+            </tr>
+            <tr>
+                <th>임금</th>
+                <td>일급 십오만원 정</td>
+            </tr>
+            <tr>
+                <th>사회보험 적용여부</th>
+                <td>고용보험, 산재보험, 국민보험, 건강보험</td>
+            </tr>
+        </table>
+        <button class="btn_full_width" onclick="this.parentElement.style.display = 'none';">지원자에게 전송</button>
+    </div>
+
+    <div id="calculate_cost" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>인건비 계산</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>근무 기간</th>
+                    <th>근무자 명</th>
+                    <th>해당기간 비용</th>
+                    <th>보험금 공제 후</th>
+                    <th>입금여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2019.5.1. ~ 2019.5.3.</td>
+                    <td>김길동</td>
+                    <td>350,000</td>
+                    <td>345,000</td>
+                    <td>입금완료</td>
+                </tr>
+                <tr>
+                    <td>2019.5.2. ~ 2019.5.5.</td>
+                    <td>김한솔</td>
+                    <td>340,000</td>
+                    <td>335,000</td>
+                    <td>입금완료</td>
+                </tr>
+                <tr>
+                    <td>2019.5.3. ~ 2019.5.8.</td>
+                    <td>김민수</td>
+                    <td>600,000</td>
+                    <td>585,000</td>
+                    <td>입금완료</td>
+                </tr>
+                <tr>
+                    <td>2019.5.4. ~ 2019.5.9.<br />근무중</td>
+                    <td>홍길동</td>
+                    <td>600,000</td>
+                    <td>585,000</td>
+                    <td>금일 입금 예정</td>
+                </tr>
+                <tr>
+                    <td>2019.5.9. ~ 2019.5.16.<br />근무시작</td>
+                    <td>김알바</td>
+                    <td>750,000</td>
+                    <td>738,000</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2019.5.12. ~ 2019.5.20.<br />근무예정</td>
+                    <td>홍지원</td>
+                    <td>1,200,000</td>
+                    <td>1,190,000</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th colspan="3">총계</th>
+                    <td colspan="2">3,840,000</td>
+                </tr>
+                <tr>
+                    <th colspan="3">보험금 총계</th>
+                    <td colspan="2">62,000</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn_full_width" onclick="this.parentElement.style.display = 'none';">확인 완료</button>
+    </div>
+
+    <div id="calculate_cost" class="modal">
+        <button class="btn_normal exit" onclick="this.parentElement.style.display = 'none';">×</button>
+        <h2>인건비 계산</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>근무 기간</th>
+                    <th>근무자 명</th>
+                    <th>해당기간 비용</th>
+                    <th>보험금 공제 후</th>
+                    <th>입금여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2019.5.1. ~ 2019.5.3.</td>
+                    <td>김길동</td>
+                    <td>350,000</td>
+                    <td>345,000</td>
+                    <td>입금완료</td>
+                </tr>
+                <tr>
+                    <td>2019.5.2. ~ 2019.5.5.</td>
+                    <td>김한솔</td>
+                    <td>340,000</td>
+                    <td>335,000</td>
+                    <td>입금완료</td>
+                </tr>
+                <tr>
+                    <td>2019.5.3. ~ 2019.5.8.</td>
+                    <td>김민수</td>
+                    <td>600,000</td>
+                    <td>585,000</td>
+                    <td>입금완료</td>
+                </tr>
+                <tr>
+                    <td>2019.5.4. ~ 2019.5.9.<br />근무중</td>
+                    <td>홍길동</td>
+                    <td>600,000</td>
+                    <td>585,000</td>
+                    <td>금일 입금 예정</td>
+                </tr>
+                <tr>
+                    <td>2019.5.9. ~ 2019.5.16.<br />근무시작</td>
+                    <td>김알바</td>
+                    <td>750,000</td>
+                    <td>738,000</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2019.5.12. ~ 2019.5.20.<br />근무예정</td>
+                    <td>홍지원</td>
+                    <td>1,200,000</td>
+                    <td>1,190,000</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th colspan="3">총계</th>
+                    <td colspan="2">3,840,000</td>
+                </tr>
+                <tr>
+                    <th colspan="3">보험금 총계</th>
+                    <td colspan="2">62,000</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn_full_width" onclick="this.parentElement.style.display = 'none';">확인 완료</button>
+    </div>
+
+</body>
+
+</html>

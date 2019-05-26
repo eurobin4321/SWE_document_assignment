@@ -94,7 +94,6 @@ div.scroll_container {
 
 table{
     border: 4px solid black;
-    min-width: 50vw;
     margin: 5px auto;
 }
 table caption{
@@ -135,9 +134,16 @@ hr{
 
 .modal{
     border: 5px solid black;
+    position: absolute;
+    width: 60vw;
+    top: 10%;
+    left: 20vw;
+    right: 20vw;
+    background-color: white;    
     padding: 20px;
     display: none;
 }
+
 
 .modal button.exit{
     width: 80px;
@@ -148,4 +154,32 @@ hr{
     padding: 0;
     position: absolute;
     right: 30px;
+}
+
+
+.input_row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal input{
+    width: 70%;
+    float: right;
+}
+
+.modal label {
+    /* border: 4px solid black; */
+    font-size: 1.1rem;
+    padding: 1px;
+    max-width: 30%;
+}
+
+textarea#introduction{
+    display: block;
+    border: 4px solid black;
+    width: 100%;
+    height: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    color: black;
 }

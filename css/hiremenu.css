@@ -1,11 +1,7 @@
-#mypage_wrapper {
-    padding: 0;
+#hiremenu_wrapper {
+    padding: 0; 
     display: table;
     /* width: 100%; */
-}
-
-h1{
-    display: table-row;
 }
 
 #info{
@@ -60,33 +56,27 @@ h1{
     padding: 5px;
 }
 
-#cert{
-    color: crimson;
+h1{
+    display: table-row;
 }
 
-#count{
-    font-size: 1.4rem;
-    border: 3px dotted black;
-    color: darkblue;
+table#employee{
+    width: 100%;
+    font-size: 0.8rem;
 }
 
-#post_table{
-  margin: 0px;
-  font-size:15px;
+table#employee tr td{
+    padding: 0;
 }
 
-#table_salary_chk{
-  margin: 0px;
-  font-size: 20px;
-  text-align: center;
+table#table_CV, #table_contract{
+    min-width: 100%;
 }
 
-#experiment_table{
-  margin: 0px;
-  font-size: 15px;
-  text-align: center;
+table#table_CV tr th{
+    width: 30%;
 }
 
-#reference table{
-  font-size: 0.8rem;
+table#table_CV tr td{
+    text-align: left;
 }
